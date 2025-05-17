@@ -4,7 +4,146 @@ import './App.css'
 function App() {
 
   return (
-    <h1>App</h1>
+    <>
+
+      <header>
+        <button><img src="./icons/menu.png" /></button>
+        <nav>
+          <div class="logo">
+            <img src="./icons/logo.png" />
+          </div>
+          <ul class="main-menu">
+            <li><a href="">Shop</a></li>
+            <li><a href="">On Sale</a></li>
+            <li><a href="">New Arrivals</a></li>
+          </ul>
+          <div class="cart-container">
+            <span id="cartItems">0</span>
+            <a href="cart.html"><img src="./icons/cart.png" /></a>
+            <a href=""><img src="./icons/avatar.png" /></a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-texts">
+            <h1>
+              FIND SHOES THAT <span>MATCHES</span> YOUR STYLE
+            </h1>
+            <p>Browse through our diverse range of meticulously crafted shoes, designed to bring out your
+              individuality and cater to your sense of style.</p>
+            <button>Shop Now</button>
+
+          </div>
+          <div class="hero-img">
+            <img src="./images/main-shoe-image.svg" />
+          </div>
+        </section>
+
+        <section class="products">
+          <h1>PRODUCTS</h1>
+          <div class="products-container">
+            <div class="product-card">
+              <div class="product-img">
+                <img src="./images/beige-shoes.png" />
+                <button><img src="./icons/cart.png" /></button>
+              </div>
+              <div class="product-texts">
+                <h3>Beige Shoes</h3>
+                <div class="rating-container">
+                  <span>Rating</span>
+                  <span>4.5/5</span>
+                </div>
+                <div class="price-container">
+                  <h2 class="price">$120</h2>
+                  <h2 class="dp">$232</h2>
+                  <p class="discount">-20%</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <a href="#">View more <img src="./icons/dark-arrow.png" /></a>
+        </section>
+      </main>
+
+      <footer>
+        <div class="cta">
+          <h1>STAY UP TO DATE ABOUT OUR LATEST OFFERS</h1>
+          <form>
+            <div class="input">
+              <img src="./icons/envelop.png" />
+              <input type="email" placeholder="Enter your email address" />
+            </div>
+            <button>Subscribe to Newsletter</button>
+          </form>
+        </div>
+        <div class="main-footer">
+          <div class="main-footer-up">
+            <div class="footer-logo">
+              <div class="logo">
+                <img src="./icons/logo.png" />
+              </div>
+              <p>We have shoes that suits your style and which you’re proud to wear. From women to men.</p>
+              <div class="sm-icons">
+                <a href=""><img src="./icons/twitter-logo.png" alt="Twitter logo" /></a>
+                <a href=""><img src="./icons/facebook-logo.png" alt="Facebook logo" /></a>
+                <a href=""><img src="./icons/instagram-logo.png" alt="Instagram logo" /></a>
+                <a href=""><img src="./icons/github-logo.png" alt="Github logo" /></a>
+              </div>
+            </div>
+            <div class="footer-texts">
+              <div class="footer-text">
+                <h3>COMPANY</h3>
+                <ul>
+                  <li><a href="">About</a></li>
+                  <li><a href="">Features</a></li>
+                </ul>
+              </div>
+              <div class="footer-text">
+                <h3>HELP</h3>
+                <ul>
+                  <li><a href="">Customer Support</a></li>
+                  <li><a href="">Delivery Details</a></li>
+                  <li><a href="">Terms & Conditions</a></li>
+                  <li><a href="">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="footer-text">
+                <h3>FAQ</h3>
+                <ul>
+                  <li><a href="">Account</a></li>
+                  <li><a href="">Manage Deliveries</a></li>
+                  <li><a href="">Orders</a></li>
+                  <li><a href="">Payments</a></li>
+                </ul>
+              </div>
+              <div class="footer-text">
+                <h3>RESOURCES</h3>
+                <ul>
+                  <li><a href="">Youtube Playlist</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="main-footer-down">
+            <p>Shopper © 2024, All Rights Reserved</p>
+            <div class="gateways">
+              <a href=""><img src="./icons/Visa.png" alt="" /></a>
+              <a href=""><img src="./icons/Mastercard.png" alt="" /></a>
+              <a href=""><img src="./icons/Paypal.png" alt="" /></a>
+              <a href=""><img src="./icons/ Pay.png" alt="" /></a>
+              <a href=""><img src="./icons/G Pay.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="./js/data.js"></script>
+      <script src="./js/index.js"></script>
+    </>
   )
 }
 
