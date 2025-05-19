@@ -93,7 +93,7 @@ const data = [
 
 
 
-export const updatedItems = data.map((item)=>{
+ const updatedItems = data.map((item)=>{
 
     let discountedPrice = 0
 
@@ -105,3 +105,5 @@ export const updatedItems = data.map((item)=>{
  
     return {...item, discountedPrice: discountedPrice, qty: 1, selected: false}
 })
+
+export default updatedItems
