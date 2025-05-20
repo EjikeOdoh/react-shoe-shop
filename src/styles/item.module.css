@@ -1,0 +1,89 @@
+.itemCard {
+    display: flex;
+    gap: 16px;
+    height: fit-content;
+}
+
+.itemCard:not(:last-child) {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #4841411A;
+}
+
+.itemImg {
+    width: 124px;
+    height: 124px;
+    border-radius: 8px;
+    background-color: var(--card-container-color);
+    display: grid;
+    place-content: center;
+    padding: 10px;
+}
+
+.itemTexts {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.itemTexts button {
+    background: none;
+    height: fit-content;
+}
+
+.up, .down {
+    display: flex;
+    justify-content: space-between;
+}
+
+.up {
+    align-items: start;
+}
+
+.down {
+    align-items: flex-end;
+}
+
+.upTexts h2 {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.upTexts p {
+    font-size: 0.875rem;
+}
+
+.upTexts p > span {
+    color: #48414199;
+}
+
+.down p {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.down .btns {
+    height: 44px;
+    width: 120px;
+    background-color: #F0F0F0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.down .btns button {
+    font-size: 1.25rem;
+    height: 100%;
+    width: 20px;
+    display: grid;
+    place-content: center;
+    padding-inline: 20px;
+}
+
+.down .btns button:hover {
+    background-color: var(--secondary-color);
+}

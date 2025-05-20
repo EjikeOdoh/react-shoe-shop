@@ -6,7 +6,7 @@ export default function Card(props) {
         <div className={styles.productCard}>
             <div className={styles.productImg}>
                 <img src={props.image} />
-                <button disabled={props.isSelected}>
+                <button disabled={props.isSelected} onClick={()=>props.handleAddToCart(props.id)}>
                     <PiShoppingCartSimpleBold size={24} />
                 </button>
             </div>
@@ -26,7 +26,6 @@ export default function Card(props) {
                             </>
                             : null
                     }
-
                 </div>
             </div>
         </div>

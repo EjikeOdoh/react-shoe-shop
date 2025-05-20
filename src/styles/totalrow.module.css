@@ -1,0 +1,17 @@
+.totalTexts {
+    border-top: 1px solid #4841411A;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+   color: var(--primary-color);
+   font-size: 1.25rem;
+}
+
+.value {
+    font-size: 1.5rem;
+    font-weight: 700;
+}

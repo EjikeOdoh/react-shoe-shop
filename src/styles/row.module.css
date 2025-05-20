@@ -1,0 +1,19 @@
+.det {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    color: #48414199;
+    font-size: 1.25rem;
+}
+
+.value {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* #discount {
+    color: #FF3333;
+} */

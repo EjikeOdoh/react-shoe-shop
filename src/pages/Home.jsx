@@ -6,10 +6,11 @@ import Card from '../components/Card';
 import { useContext } from 'react';
 import { CartContext } from '../contexts/CartContext';
 
-export default function Home() {
+export default function Home(props) {
 
-    const shoes = useContext(CartContext)
-   
+    // Destructured the object we got from context
+    const {shoes} = useContext(CartContext)
+  
     const cards = shoes.map(shoe=>{
         return (
             <Card 
@@ -22,6 +23,7 @@ export default function Home() {
                 price={shoe.price}
                 isSelected={shoe.selected}
                 rating={shoe.rating}
+                handleAddToCart={props.addToCart}
             />
         )
     })

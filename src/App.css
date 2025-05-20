@@ -1,0 +1,13 @@
+.mini-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top:1px solid #4841411A ;
+    padding-top: 24px;
+    color:#48414199 ;
+}
+
+.current {
+    color: #484141;
+    font-weight: 700;
+}
