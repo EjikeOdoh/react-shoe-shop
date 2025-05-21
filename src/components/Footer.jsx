@@ -10,7 +10,7 @@ export default function Footer() {
             <h1>STAY UP TO DATE ABOUT OUR LATEST OFFERS</h1>
             <form>
                 <div className="input">
-                    <PiEnvelope />
+                    <PiEnvelope size={24} />
                     <input type="email" placeholder="Enter your email address" />
                 </div>
                 <button>Subscribe to Newsletter</button>

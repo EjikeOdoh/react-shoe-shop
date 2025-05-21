@@ -17,16 +17,6 @@ label {
     border: none !important;
 }
 
-/* input {
-    position: relative;
-}
-
-input:required::before {
-    content: "*";
-    color: red;
-    position: absolute;
-    left: -20px;
-} */
 
 label span {
     flex-grow: 1;
@@ -187,5 +177,9 @@ section>h1 {
     .orderSummary h2 {
         border-bottom: 1px solid #4841411A;
         padding-bottom: 16px;
+    }
+
+    .paymentOptions label {
+        font-size: 1rem;
     }
 }

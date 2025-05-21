@@ -87,3 +87,33 @@
 .down .btns button:hover {
     background-color: var(--secondary-color);
 }
+
+
+@media (max-width: 600px) {
+
+    .itemCard {
+        min-width: 100%;
+    }
+
+    .itemImg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .upTexts h2 {
+        font-size: 1rem;
+    }
+
+    .upTexts p {
+        font-size: 0.75rem;
+    }
+
+    .down p {
+        font-size: 1.25rem;
+    }
+
+    .down .btns {
+        height: 30px;
+    }
+
+}

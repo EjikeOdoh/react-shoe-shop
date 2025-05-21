@@ -6,7 +6,7 @@ import Card from '../components/Card';
 import { useContext } from 'react';
 import { CartContext } from '../contexts/CartContext';
 
-export default function Home(props) {
+export default function Home() {
 
     // Destructured the object we got from context
     const {shoes} = useContext(CartContext)
@@ -23,13 +23,12 @@ export default function Home(props) {
                 price={shoe.price}
                 isSelected={shoe.selected}
                 rating={shoe.rating}
-                handleAddToCart={props.addToCart}
             />
         )
     })
     return (
         <Wrapper>
-            <main>
+            <main className={styles.main}>
                 <section className={styles.hero}>
                     <div className={styles.heroTexts}>
                         <h1>

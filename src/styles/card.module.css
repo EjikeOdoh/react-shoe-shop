@@ -73,7 +73,7 @@
 @media (max-width: 600px) {
     .productCard {
         margin: auto;
-        width: 400px;
+        width: 100%;
     }
 
     .productTexts h3 {

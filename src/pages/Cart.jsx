@@ -13,10 +13,7 @@ import { CartContext } from '../contexts/CartContext';
 import orderCalculator from '../utils/orderCalculator';
 import { Link, NavLink } from 'react-router';
 
-export default function Cart(props) {
-
-    const {actions} = props
-    const {decrease, increase, remove} = (actions)
+export default function Cart() {
 
     // Destructured from context value
     const {cart} = useContext(CartContext)
@@ -33,9 +30,6 @@ export default function Cart(props) {
                 color={shoe.color}
                 price={shoe.discountedPrice}
                 qty={shoe.qty}
-                increase={increase}
-                decrease={decrease}
-                remove={remove}
             />
         )
     })
@@ -43,7 +37,7 @@ export default function Cart(props) {
     return (
         <Wrapper>
             <main>
-                <div class="mini-nav">
+                <div className="mini-nav">
                     <NavLink to='/'>Home</NavLink>
                     <RxCaretRight />
                     <NavLink to='/cart' className={({isActive})=> isActive ? "current" : undefined}>Cart</NavLink>
@@ -54,13 +48,13 @@ export default function Cart(props) {
                     {
                         cart.length === 0 ? 
                         <EmptyCart /> : 
-                            <div class={styles.itemsContainer}>
-                        <div class={styles.items}>
+                            <div className={styles.itemsContainer}>
+                        <div className={styles.items}>
                             {items}
                         </div>
-                        <div class={styles.orderSummary}>
+                        <div className={styles.orderSummary}>
                             <h2>Order Summary</h2>
-                            <div class={styles.orderDetails}>
+                            <div className={styles.orderDetails}>
                               <Row label="Subtotal" value={subTotal.toFixed(2)}  />
                               <Row label={`Discount (-${discount.toFixed(2)}%)`} value={discountAmount.toFixed(2)} isDiscount={true} />
                               <Row label="Delivery Fee" value={deliveryFee.toFixed(2)} />
@@ -69,7 +63,7 @@ export default function Cart(props) {
                              
                             </div>
                             <form>
-                                <div class={styles.input}>
+                                <div className={styles.input}>
                                     <GoTag size={24} />
                                     <input type="text" placeholder="Apply promo code" />
                                 </div>

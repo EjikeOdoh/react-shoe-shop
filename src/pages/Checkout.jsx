@@ -15,7 +15,7 @@ export default function Checkout() {
 
     // destructured cart context value
     const { cart } = useContext(CartContext)
-    const { deliveryFee, discount, discountAmount, subTotal, totalAmount } = orderCalculator(cart)
+    const { deliveryFee, discount, discountAmount, totalAmount } = orderCalculator(cart)
 
     const items = cart.map(shoe=>{
         return (
@@ -27,11 +27,17 @@ export default function Checkout() {
         )
     })
 
+    const handleForm = (formData) => {
+        console.log(formData)
+        const data = Object.fromEntries(formData)
+        console.log(data)
+    }
+
 
     return (
         <Wrapper>
             <main>
-                <div class="mini-nav">
+                <div className="mini-nav">
                     <NavLink to='/' className={({isActive})=> isActive ? "current" : undefined}>Home</NavLink>
                     <RxCaretRight />
                     <NavLink to='/cart' className={({isActive})=> isActive ? "current" : undefined}>Cart</NavLink>
@@ -41,12 +47,12 @@ export default function Checkout() {
 
                 <section>
                     <h1>Checkout</h1>
-                    <form class={styles.itemsContainer}>
-                        <div class={styles.billingDetails}>
+                    <form action={handleForm} className={styles.itemsContainer}>
+                        <div className={styles.billingDetails}>
                             <h2>
                                 Billing Details
                             </h2>
-                            <div class={styles.fullname}>
+                            <div className={styles.fullname}>
                                 <input type="text" name="firstName" id="" placeholder="First Name" required />
                                 <input type="text" name="lastName" id="" placeholder="Last Name" required />
                             </div>
@@ -63,11 +69,11 @@ export default function Checkout() {
                             <input type="text" name="orderNotes" id="" placeholder="Order notes" />
                         </div>
                         <hr />
-                        <div class={styles.orderSummary}>
+                        <div className={styles.orderSummary}>
                             <h2>Order Summary</h2>
-                            <div class={styles.orderDetails}>
+                            <div className={styles.orderDetails}>
                                 <Row label="PRODUCT" value="TOTAL" notFigure={true} />
-                                <div class={styles.items}>
+                                <div className={styles.items}>
                                     {items}
                                 </div>
                                 <Row label={`Discount (-${discount.toFixed(2)}%)`} value={discountAmount.toFixed(2)} isDiscount={true} />
@@ -75,7 +81,7 @@ export default function Checkout() {
 
                                 <TotalRow value={totalAmount.toFixed(2)} />
                             </div>
-                            <div class={styles.paymentOptions}>
+                            <div className={styles.paymentOptions}>
                                 <label>
                                     <input type="radio" name="gateway" required value="bank-transfer" />Direct bank transfer
                                 </label>
@@ -87,7 +93,7 @@ export default function Checkout() {
                                 <label>
                                     <input type="radio" name="gateway" required value="cod" />Cash on delivery
                                 </label>
-                                <label class={styles.paypal}>
+                                <label className={styles.paypal}>
                                     <input type="radio" name="gateway" required value="paypal" />PayPal
                                     <FaPaypal size={24} />
                                 </label>

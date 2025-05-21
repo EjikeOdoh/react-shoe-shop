@@ -133,7 +133,7 @@ section > h1 {
         font-size: 2rem;
     }
 
-    .items-container {
+    .itemsContainer {
         grid-template-columns: 1fr;
     }
 
@@ -141,44 +141,11 @@ section > h1 {
         padding: 14px;
     }
 
-    .item-car {
-        padding-bottom: 16px;
-    }
-
-    .item-img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .up-texts h2 {
-        font-size: 1rem;
-    }
-
-    .up-texts p {
-        font-size: 0.75rem;
-    }
-
-    .down p {
-        font-size: 1.25rem;
-    }
-
-    .down .btns {
-        height: 30px;
-    }
-
     .orderSummary {
         padding: 20px;
     }
 
     .orderSummary h2 {
-        font-size: 1.25rem;
-    }
-
-    .label, .value {
-        font-size: 1rem;
-    }
-
-    #total {
         font-size: 1.25rem;
     }
 

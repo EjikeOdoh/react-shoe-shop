@@ -1,12 +1,20 @@
 import { PiShoppingCartSimpleBold } from 'react-icons/pi'
 import styles from '../styles/card.module.css'
+import { useContext } from 'react'
+import { CartDispatchContext } from '../contexts/CartContext'
 
 export default function Card(props) {
+
+    const dispatch = useContext(CartDispatchContext)
+
     return (
         <div className={styles.productCard}>
             <div className={styles.productImg}>
                 <img src={props.image} />
-                <button disabled={props.isSelected} onClick={()=>props.handleAddToCart(props.id)}>
+                <button disabled={props.isSelected} onClick={() => dispatch({
+                    type: 'add',
+                    id: props.id
+                })}>
                     <PiShoppingCartSimpleBold size={24} />
                 </button>
             </div>
